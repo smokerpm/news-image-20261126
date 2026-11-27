@@ -1,28 +1,28 @@
 #!/usr/bin/env python3
 """News-image entry for the make.fun bounty ``news-image-20261126``.
 
-Summarises world news of Thursday 26 November 2026 in a single image.
+A single image summarising world news of Thursday 26 November 2026.
 
-The image (``entry.png``, 1024x683, 373147 bytes, shipped next to this
-file) is a broadsheet front page, "THE WORLD TODAY - Thursday,
-26 November 2026", with four illustrated panels covering four real
-stories from that day:
+The shipped image (``entry.png``, 1024x683, 373147 bytes) is a
+broadsheet front page, "THE WORLD TODAY - Thursday, 26 November
+2026", with four illustrated panels covering four real stories
+from that day:
 
-1. Missiles hit the Ras Tanura refinery (Saudi Arabia); Brent crude
-   pushed above $94 a barrel.
+1. Missiles hit the Ras Tanura refinery (Saudi Arabia); Brent
+   crude pushed above $94 a barrel.
 2. Colombian police freed 20 hostages after a 17-hour supermarket
    siege in Cartagena.
 3. The BepiColombo probe reached Mercury orbit after an 8-year
    journey.
 4. A fuel-tanker fire near Cairo killed at least 30 people.
 
-The image is a 256-colour palette PNG: the same front page as the
-first submission, re-encoded to fit the competition's caps (at most
-1 MiB and at most 1024 by 1024 pixels). The first submission shipped
-a 1536x1024 RGB PNG of 1816786 bytes and failed the gate's
-"At most 1048576 bytes" check; this version is 1024x683 and
-373147 bytes, inside both caps, with the layout, headlines and
-pictures unchanged.
+The PNG is a 256-colour palette image: it fits the competition's
+caps of at most 1 MiB (1048576 bytes) and at most 1024 by 1024
+pixels. An earlier submission shipped a 1536x1024 RGB PNG of
+1816786 bytes and failed the gate's "At most 1048576 bytes"
+check; this version is the same front page re-encoded to
+1024x683 and 373147 bytes, inside both caps, with the layout,
+headlines and pictures unchanged.
 
 How it runs
 -----------
@@ -30,11 +30,13 @@ How it runs
 
 The optional date argument (or the ``MAKEFUN_DATE`` environment
 variable) selects the news day; this entry only covers 2026-11-26,
-so any other date is rejected. The program writes exactly one file,
-``entry.png``, into ``$MAKEFUN_OUTPUT_DIR`` (default ``/output``).
+so any other date is rejected. The program writes exactly one
+file, ``entry.png``, into ``$MAKEFUN_OUTPUT_DIR`` (default
+``/output``).
 
 Standard library only. No network access, no randomness, no clock
-reads: two runs write byte-identical output. Runtime is well under
+reads: two runs write byte-identical output (verified: two runs in
+this build produced identical SHA-256). Runtime is well under
 five minutes.
 """
 

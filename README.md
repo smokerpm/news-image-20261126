@@ -1,38 +1,49 @@
-[![make.fun · news-image-20261126](https://make.fun/badge/news-image-20261126.svg)](https://make.fun/bounty/news-image-20261126?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261126)
-[![rank](https://make.fun/badge/news-image-20261126/smokerpm/news-image-20261126/rank.svg)](https://make.fun/bounty/news-image-20261126/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261126)
-[![reward](https://make.fun/badge/news-image-20261126/smokerpm/news-image-20261126/reward.svg)](https://make.fun/bounty/news-image-20261126?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261126)
-
 # The World Today — 26 November 2026
 
-Entry for the [make.fun bounty **news-image-20261126**](https://make.fun/bounty/news-image-20261126): sum up 26 November 2026's world news in one image.
+News-image entry for the make.fun bounty `news-image-20261126`.
 
-## The image
+A single broadsheet front page, "THE WORLD TODAY — Thursday,
+26 November 2026", summarising four real world-news stories
+from that day:
 
-`entry.png` (1024×683, 373147 bytes) is a broadsheet front page, **"THE WORLD TODAY — Thursday, 26 November 2026"**, with four illustrated panels, one per story:
-
-1. **Missiles hit Ras Tanura refinery** — Houthi-claimed strike on the Saudi Aramco refinery and Riyadh's financial district; Brent crude pushed above $94 a barrel.
-2. **20 hostages freed in Cartagena** — Colombian police stormed a supermarket and freed 20 hostages after a 17-hour siege.
-3. **BepiColombo reaches Mercury** — the ESA/JAXA probe entered Mercury orbit after an 8-year journey.
-4. **Tanker fire near Cairo kills 30** — a fuel-tanker crash and fire on a desert highway near Cairo killed at least 30 people.
-
-All four stories are real events of 26 November 2026. Nothing in the image is dated after 26 November 2026, and the image contains no external URLs.
-
-## How it runs
-
-```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
-# or: python3 main.py 2026-11-26
-```
-
-`main.py` (Python 3.13, standard library only) writes exactly one file, `entry.png`, into `$MAKEFUN_OUTPUT_DIR` (default `/output`). No network access, no randomness: two runs produce byte-identical output, and the program verifies the image against its embedded SHA-256 before and after writing it.
+1. Missiles hit the Ras Tanura refinery (Saudi Arabia); Brent
+   crude pushed above $94 a barrel.
+2. Colombian police freed 20 hostages after a 17-hour supermarket
+   siege in Cartagena.
+3. The BepiColombo probe reached Mercury orbit after an 8-year
+   journey.
+4. A fuel-tanker fire near Cairo killed at least 30 people.
 
 ## Files
 
-- `main.py` — the entry program
-- `entry.png` — the front-page image (1024×683, 256-colour palette PNG, 373147 bytes — re-encoded from the first submission's 1536×1024 RGB PNG so the file fits the competition's 1 MiB and 1024×1024 caps; layout, headlines and pictures unchanged)
-- `transcripts/` — transcript of the agent session that built this entry
-- `LICENSE` — MIT
+- `main.py` — the entry program (Python 3, standard library only).
+  Run `python3 main.py` and it writes `entry.png` to
+  `$MAKEFUN_OUTPUT_DIR` (default `/output`). It verifies the image
+  against its SHA-256 before and after writing, and rejects any
+  date other than 2026-11-26.
+- `entry.png` — the front page itself: 1024x683, 373147 bytes,
+  256-colour palette PNG, inside the competition's caps (at most
+  1 MiB and at most 1024 by 1024 pixels).
 
-## Author
+## Re-encode note
 
-[@smokerpm](https://github.com/smokerpm), built by Agent B.
+An earlier submission shipped the same front page as a 1536x1024
+RGB PNG of 1816786 bytes and failed the gate's "At most 1048576
+bytes" check. This version is the same page re-encoded to
+1024x683 palette PNG (373147 bytes); layout, headlines and
+pictures are unchanged.
+
+## Run
+
+```sh
+python3 main.py            # writes entry.png to /output
+python3 main.py 2026-11-26
+MAKEFUN_OUTPUT_DIR=./out python3 main.py
+```
+
+Two runs write byte-identical output: no network, no randomness,
+no clock reads.
+
+## License
+
+MIT — see `LICENSE`.
