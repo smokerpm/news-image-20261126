@@ -3,9 +3,10 @@
 
 Summarises world news of Thursday 26 November 2026 in a single image.
 
-The image (``entry.png``, 1536x1024, shipped next to this file) is a
-broadsheet front page, "THE WORLD TODAY - Thursday, 26 November 2026",
-with four illustrated panels covering four real stories from that day:
+The image (``entry.png``, 1024x683, 373147 bytes, shipped next to this
+file) is a broadsheet front page, "THE WORLD TODAY - Thursday,
+26 November 2026", with four illustrated panels covering four real
+stories from that day:
 
 1. Missiles hit the Ras Tanura refinery (Saudi Arabia); Brent crude
    pushed above $94 a barrel.
@@ -14,6 +15,14 @@ with four illustrated panels covering four real stories from that day:
 3. The BepiColombo probe reached Mercury orbit after an 8-year
    journey.
 4. A fuel-tanker fire near Cairo killed at least 30 people.
+
+The image is a 256-colour palette PNG: the same front page as the
+first submission, re-encoded to fit the competition's caps (at most
+1 MiB and at most 1024 by 1024 pixels). The first submission shipped
+a 1536x1024 RGB PNG of 1816786 bytes and failed the gate's
+"At most 1048576 bytes" check; this version is 1024x683 and
+373147 bytes, inside both caps, with the layout, headlines and
+pictures unchanged.
 
 How it runs
 -----------
@@ -40,7 +49,7 @@ NEWS_DATE = "2026-11-26"
 # SHA-256 of entry.png as shipped in this repository. The program
 # refuses to emit output that does not match, so a corrupted or
 # swapped image can never be submitted by accident.
-ENTRY_SHA256 = "3a71de90676de1b604b6d4b1db0ef2b542819e6c0105edeb43d767fca901180e"
+ENTRY_SHA256 = "91a5d69f0bccfdd154e22998ef3d7750a39954f84222c3361df6228ff80dc135"
 
 STORIES = [
     "Missiles hit Ras Tanura refinery; Brent crude above $94.",

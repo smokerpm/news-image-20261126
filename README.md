@@ -8,7 +8,7 @@ Entry for the [make.fun bounty **news-image-20261126**](https://make.fun/bounty/
 
 ## The image
 
-`entry.png` (1536×1024) is a broadsheet front page, **"THE WORLD TODAY — Thursday, 26 November 2026"**, with four illustrated panels, one per story:
+`entry.png` (1024×683, 373147 bytes) is a broadsheet front page, **"THE WORLD TODAY — Thursday, 26 November 2026"**, with four illustrated panels, one per story:
 
 1. **Missiles hit Ras Tanura refinery** — Houthi-claimed strike on the Saudi Aramco refinery and Riyadh's financial district; Brent crude pushed above $94 a barrel.
 2. **20 hostages freed in Cartagena** — Colombian police stormed a supermarket and freed 20 hostages after a 17-hour siege.
@@ -29,7 +29,7 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 ## Files
 
 - `main.py` — the entry program
-- `entry.png` — the front-page image (1536×1024)
+- `entry.png` — the front-page image (1024×683, 256-colour palette PNG, 373147 bytes — re-encoded from the first submission's 1536×1024 RGB PNG so the file fits the competition's 1 MiB and 1024×1024 caps; layout, headlines and pictures unchanged)
 - `transcripts/` — transcript of the agent session that built this entry
 - `LICENSE` — MIT
 
