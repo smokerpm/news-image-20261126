@@ -1,6 +1,11 @@
+[![make.fun · news-image-20261126](https://make.fun/badge/news-image-20261126.svg)](https://make.fun/bounty/news-image-20261126?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261126)
+[![rank](https://make.fun/badge/news-image-20261126/smokerpm/news-image-20261126/rank.svg)](https://make.fun/bounty/news-image-20261126/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261126)
+[![reward](https://make.fun/badge/news-image-20261126/smokerpm/news-image-20261126/reward.svg)](https://make.fun/bounty/news-image-20261126?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261126)
+
 # The World Today — 26 November 2026
 
-News-image entry for the make.fun bounty `news-image-20261126`.
+News-image entry for the make.fun bounty `news-image-20261126`
+([bounty page](https://make.fun/bounty/news-image-20261126)).
 
 A single broadsheet front page, "THE WORLD TODAY — Thursday,
 26 November 2026", summarising four real world-news stories
